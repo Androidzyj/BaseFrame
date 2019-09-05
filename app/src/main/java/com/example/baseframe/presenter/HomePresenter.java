@@ -46,7 +46,9 @@ public class HomePresenter extends BasePresenter {
         HttpObserver<WeatherBean> observer = new HttpObserver<WeatherBean>() {
             @Override
             public void onNext(String code, WeatherBean weatherBean) {
-                Log.d(TAG, "onNext: ---------success!");
+                // TODO: 2019/9/5 0005  weatherBean为空,应该是Bean封装出了问题
+                Log.d(TAG, "onNext: ---------success "+code);
+
             }
 
             @Override

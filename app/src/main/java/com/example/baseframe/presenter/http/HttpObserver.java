@@ -1,4 +1,6 @@
 package com.example.baseframe.presenter.http;
+import android.util.Log;
+
 import io.reactivex.Observer;
 import io.reactivex.disposables.Disposable;
 
@@ -31,6 +33,7 @@ public abstract class HttpObserver<T> implements Observer<HttpResult<T>> {
     @Override
     public void onNext(HttpResult<T> httpResult) {
         onNext(httpResult.getMessage(),httpResult.getSubjects());
+        Log.d("HomePresenter", "onNext: --------object"+httpResult.getSubjects());
 
     }
 

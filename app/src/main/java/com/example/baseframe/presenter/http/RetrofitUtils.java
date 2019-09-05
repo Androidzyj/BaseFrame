@@ -2,7 +2,6 @@ package com.example.baseframe.presenter.http;
 
 import android.content.Context;
 import android.util.Log;
-
 import com.example.baseframe.base.Config;
 import java.io.File;
 import java.io.IOException;

@@ -11,9 +11,9 @@ public class WeatherBean extends HttpResult {
 
 
     /**
-     * msg : 成功!
-     * data : {"yesterday":{"date":"4日星期三","high":"高温 24℃","fx":"无持续风向","low":"低温 19℃","fl":"<![CDATA[<3级]]>","type":"小雨"},"city":"成都","aqi":null,"forecast":[{"date":"5日星期四","high":"高温 27℃","fengli":"<![CDATA[<3级]]>","low":"低温 20℃","fengxiang":"无持续风向","type":"多云"},{"date":"6日星期五","high":"高温 27℃","fengli":"<![CDATA[<3级]]>","low":"低温 21℃","fengxiang":"无持续风向","type":"阵雨"},{"date":"7日星期六","high":"高温 25℃","fengli":"<![CDATA[<3级]]>","low":"低温 21℃","fengxiang":"无持续风向","type":"阵雨"},{"date":"8日星期天","high":"高温 26℃","fengli":"<![CDATA[<3级]]>","low":"低温 21℃","fengxiang":"无持续风向","type":"阵雨"},{"date":"9日星期一","high":"高温 25℃","fengli":"<![CDATA[<3级]]>","low":"低温 21℃","fengxiang":"无持续风向","type":"小雨"}],"ganmao":"各项气象条件适宜，无明显降温过程，发生感冒机率较低。","wendu":"22"}
+     * data : {"yesterday":{"date":"4日星期三","high":"高温 24℃","fx":"无持续风向","low":"低温 19℃","fl":"<![CDATA[<3级]]>","type":"小雨"},"city":"成都","aqi":null,"forecast":[{"date":"5日星期四","high":"高温 27℃","fengli":"<![CDATA[<3级]]>","low":"低温 21℃","fengxiang":"无持续风向","type":"多云"},{"date":"6日星期五","high":"高温 27℃","fengli":"<![CDATA[<3级]]>","low":"低温 21℃","fengxiang":"无持续风向","type":"多云"},{"date":"7日星期六","high":"高温 27℃","fengli":"<![CDATA[<3级]]>","low":"低温 21℃","fengxiang":"无持续风向","type":"阵雨"},{"date":"8日星期天","high":"高温 29℃","fengli":"<![CDATA[<3级]]>","low":"低温 21℃","fengxiang":"无持续风向","type":"阵雨"},{"date":"9日星期一","high":"高温 27℃","fengli":"<![CDATA[<3级]]>","low":"低温 21℃","fengxiang":"无持续风向","type":"小雨"}],"ganmao":"各项气象条件适宜，无明显降温过程，发生感冒机率较低。","wendu":"24"}
      */
+
     private DataBean data;
 
     public DataBean getData() {
@@ -29,9 +29,9 @@ public class WeatherBean extends HttpResult {
          * yesterday : {"date":"4日星期三","high":"高温 24℃","fx":"无持续风向","low":"低温 19℃","fl":"<![CDATA[<3级]]>","type":"小雨"}
          * city : 成都
          * aqi : null
-         * forecast : [{"date":"5日星期四","high":"高温 27℃","fengli":"<![CDATA[<3级]]>","low":"低温 20℃","fengxiang":"无持续风向","type":"多云"},{"date":"6日星期五","high":"高温 27℃","fengli":"<![CDATA[<3级]]>","low":"低温 21℃","fengxiang":"无持续风向","type":"阵雨"},{"date":"7日星期六","high":"高温 25℃","fengli":"<![CDATA[<3级]]>","low":"低温 21℃","fengxiang":"无持续风向","type":"阵雨"},{"date":"8日星期天","high":"高温 26℃","fengli":"<![CDATA[<3级]]>","low":"低温 21℃","fengxiang":"无持续风向","type":"阵雨"},{"date":"9日星期一","high":"高温 25℃","fengli":"<![CDATA[<3级]]>","low":"低温 21℃","fengxiang":"无持续风向","type":"小雨"}]
+         * forecast : [{"date":"5日星期四","high":"高温 27℃","fengli":"<![CDATA[<3级]]>","low":"低温 21℃","fengxiang":"无持续风向","type":"多云"},{"date":"6日星期五","high":"高温 27℃","fengli":"<![CDATA[<3级]]>","low":"低温 21℃","fengxiang":"无持续风向","type":"多云"},{"date":"7日星期六","high":"高温 27℃","fengli":"<![CDATA[<3级]]>","low":"低温 21℃","fengxiang":"无持续风向","type":"阵雨"},{"date":"8日星期天","high":"高温 29℃","fengli":"<![CDATA[<3级]]>","low":"低温 21℃","fengxiang":"无持续风向","type":"阵雨"},{"date":"9日星期一","high":"高温 27℃","fengli":"<![CDATA[<3级]]>","low":"低温 21℃","fengxiang":"无持续风向","type":"小雨"}]
          * ganmao : 各项气象条件适宜，无明显降温过程，发生感冒机率较低。
-         * wendu : 22
+         * wendu : 24
          */
 
         private YesterdayBean yesterday;
@@ -160,7 +160,7 @@ public class WeatherBean extends HttpResult {
              * date : 5日星期四
              * high : 高温 27℃
              * fengli : <![CDATA[<3级]]>
-             * low : 低温 20℃
+             * low : 低温 21℃
              * fengxiang : 无持续风向
              * type : 多云
              */
