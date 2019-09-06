@@ -8,23 +8,6 @@ import java.util.List;
  * Created by Administrator on 2019/9/5 0005
  */
 public class WeatherBean extends HttpResult {
-
-
-    /**
-     * data : {"yesterday":{"date":"4日星期三","high":"高温 24℃","fx":"无持续风向","low":"低温 19℃","fl":"<![CDATA[<3级]]>","type":"小雨"},"city":"成都","aqi":null,"forecast":[{"date":"5日星期四","high":"高温 27℃","fengli":"<![CDATA[<3级]]>","low":"低温 21℃","fengxiang":"无持续风向","type":"多云"},{"date":"6日星期五","high":"高温 27℃","fengli":"<![CDATA[<3级]]>","low":"低温 21℃","fengxiang":"无持续风向","type":"多云"},{"date":"7日星期六","high":"高温 27℃","fengli":"<![CDATA[<3级]]>","low":"低温 21℃","fengxiang":"无持续风向","type":"阵雨"},{"date":"8日星期天","high":"高温 29℃","fengli":"<![CDATA[<3级]]>","low":"低温 21℃","fengxiang":"无持续风向","type":"阵雨"},{"date":"9日星期一","high":"高温 27℃","fengli":"<![CDATA[<3级]]>","low":"低温 21℃","fengxiang":"无持续风向","type":"小雨"}],"ganmao":"各项气象条件适宜，无明显降温过程，发生感冒机率较低。","wendu":"24"}
-     */
-
-    private DataBean data;
-
-    public DataBean getData() {
-        return data;
-    }
-
-    public void setData(DataBean data) {
-        this.data = data;
-    }
-
-    public static class DataBean {
         /**
          * yesterday : {"date":"4日星期三","high":"高温 24℃","fx":"无持续风向","low":"低温 19℃","fl":"<![CDATA[<3级]]>","type":"小雨"}
          * city : 成都
@@ -220,5 +203,4 @@ public class WeatherBean extends HttpResult {
                 this.type = type;
             }
         }
-    }
 }

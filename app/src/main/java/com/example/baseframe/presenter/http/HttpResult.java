@@ -7,7 +7,7 @@ package com.example.baseframe.presenter.http;
 public class HttpResult<T> {
     private int code;
     private String msg;
-    private T subjects;
+    private T data;
 
     public int getCode() {
         return code;
@@ -26,10 +26,10 @@ public class HttpResult<T> {
     }
 
     public T getSubjects() {
-        return subjects;
+        return data;
     }
 
     public void setSubjects(T subjects) {
-        this.subjects = subjects;
+        this.data = data;
     }
 }

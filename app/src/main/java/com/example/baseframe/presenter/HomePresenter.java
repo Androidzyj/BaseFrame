@@ -46,8 +46,9 @@ public class HomePresenter extends BasePresenter {
         HttpObserver<WeatherBean> observer = new HttpObserver<WeatherBean>() {
             @Override
             public void onNext(String code, WeatherBean weatherBean) {
-                // TODO: 2019/9/5 0005  weatherBean为空,应该是Bean封装出了问题
+                // TODO: 2019/9/5 0005  定义的泛型解析的数据为空
                 Log.d(TAG, "onNext: ---------success "+code);
+                Log.d(TAG, "onNext: ---------"+weatherBean.getCity());
 
             }
 
