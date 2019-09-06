@@ -7,6 +7,7 @@ import com.example.baseframe.presenter.http.HttpObserver;
 import com.example.baseframe.presenter.http.HttpThrowable;
 import com.example.baseframe.presenter.http.RetrofitUtils;
 import com.example.baseframe.view.LifeCycleEvent;
+
 import io.reactivex.Observable;
 import io.reactivex.android.schedulers.AndroidSchedulers;
 import io.reactivex.functions.Predicate;
@@ -21,7 +22,6 @@ public class HomePresenter extends BasePresenter {
     private Context context;
     private PublishSubject<LifeCycleEvent> lifecycleSubject;
     private RetrofitUtils retrofitUtils;
-
     public HomePresenter(Context context, PublishSubject<LifeCycleEvent> lifecycleSubject) {
         this.context = context;
         this.lifecycleSubject = lifecycleSubject;
@@ -53,6 +53,8 @@ public class HomePresenter extends BasePresenter {
 
             @Override
             public void onError(HttpThrowable httpThrowable) {
+                //获取错误类型 httpThrowable.errorType
+                //获取错误信息 httpThrowable.message
                 Log.d(TAG, "onError: ---------error!");
 
             }
