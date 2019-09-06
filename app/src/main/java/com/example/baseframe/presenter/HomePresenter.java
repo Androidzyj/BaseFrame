@@ -7,6 +7,7 @@ import com.example.baseframe.presenter.http.HttpObserver;
 import com.example.baseframe.presenter.http.HttpThrowable;
 import com.example.baseframe.presenter.http.RetrofitUtils;
 import com.example.baseframe.view.LifeCycleEvent;
+import com.example.baseframe.view.MainActivity;
 
 import io.reactivex.Observable;
 import io.reactivex.android.schedulers.AndroidSchedulers;
@@ -19,10 +20,10 @@ import io.reactivex.subjects.PublishSubject;
  */
 public class HomePresenter extends BasePresenter {
     public static final String TAG = "HomePresenter";
-    private Context context;
+    private MainActivity context;
     private PublishSubject<LifeCycleEvent> lifecycleSubject;
     private RetrofitUtils retrofitUtils;
-    public HomePresenter(Context context, PublishSubject<LifeCycleEvent> lifecycleSubject) {
+    public HomePresenter(MainActivity context, PublishSubject<LifeCycleEvent> lifecycleSubject) {
         this.context = context;
         this.lifecycleSubject = lifecycleSubject;
     }
@@ -48,7 +49,7 @@ public class HomePresenter extends BasePresenter {
             public void onNext(String code, WeatherBean weatherBean) {
                 Log.d(TAG, "onNext: ---------success "+code);
                 Log.d(TAG, "onNext: ---------"+weatherBean.getCity());
-
+                context.getWeatherInfo(weatherBean);
             }
 
             @Override
@@ -56,6 +57,7 @@ public class HomePresenter extends BasePresenter {
                 //获取错误类型 httpThrowable.errorType
                 //获取错误信息 httpThrowable.message
                 Log.d(TAG, "onError: ---------error!");
+                context.getWeatherInfoFailed(httpThrowable.errorType,httpThrowable.message);
 
             }
         };
