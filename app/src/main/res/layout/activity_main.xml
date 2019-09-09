@@ -20,6 +20,7 @@
         android:layout_gravity="bottom"
         android:orientation="horizontal"
         android:baselineAligned="false"
+        android:background="@color/withe"
         >
         <!--首页-->
         <LinearLayout

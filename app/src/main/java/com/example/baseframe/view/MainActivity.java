@@ -1,5 +1,6 @@
 package com.example.baseframe.view;
 
+import android.content.Context;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -26,12 +27,14 @@ public class MainActivity extends BaseActivity implements WeatherInfo, ViewPager
     private ImageView mHomeView,mNewsView,mProgramView,mMineView;
     private LinearLayout home_ll,news_ll,program_ll,mine_ll;
     private FixedFragmentPagerAdapter mPageAdapter;
+    private static Context mContext;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        mContext = getApplicationContext();
 
         viewPager = findViewById(R.id.vp);
         mHomeView = findViewById(R.id.home_iv);
@@ -145,5 +148,10 @@ public class MainActivity extends BaseActivity implements WeatherInfo, ViewPager
                  break;
          }
 
+    }
+
+    //全局获取Context
+    public static Context getContext(){
+        return mContext;
     }
 }
