@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">BaseFrame</string>
+    <string name="home">首页</string>
+    <string name="news">资讯</string>
+    <string name="program">项目</string>
+    <string name="mine">我的</string>
 </resources>

@@ -1,6 +1,5 @@
 package com.example.baseframe.presenter;
 
-import android.content.Context;
 import android.util.Log;
 import com.example.baseframe.model.WeatherBean;
 import com.example.baseframe.presenter.http.HttpObserver;
