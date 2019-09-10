@@ -23,6 +23,27 @@ public class HomeRecycleViewAdapter extends RecyclerView.Adapter<HomeRecycleView
     private Context context;
     private List<HomeBean> homeBeanList;
 
+    public static final int TYPE_BANNER = 0;
+    public static final int TYPE_NORMAL = 1;
+
+    private View mHeaderView;
+
+    public View getHeaderView() {
+        return mHeaderView;
+    }
+
+    public void setHeaderView(View mHeaderView) {
+        this.mHeaderView = mHeaderView;
+        notifyItemInserted(0);
+    }
+
+    @Override
+    public int getItemViewType(int position) {
+        if (mHeaderView == null) return TYPE_NORMAL;
+        if (position == 0)return  TYPE_BANNER;
+        return TYPE_NORMAL;
+    }
+
     public HomeRecycleViewAdapter(Context context, List<HomeBean> homeBeanList) {
         this.context = context;
         this.homeBeanList = homeBeanList;
@@ -31,6 +52,8 @@ public class HomeRecycleViewAdapter extends RecyclerView.Adapter<HomeRecycleView
     @NonNull
     @Override
     public HomeRecycleViewAdapter.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+        if (mHeaderView != null &&viewType == TYPE_BANNER) return new ViewHolder(mHeaderView);
+
         View view = LayoutInflater.from(context).inflate(R.layout.item_rec_home_detail,parent,false);
         ViewHolder viewHolder = new ViewHolder(view);
         return viewHolder;
@@ -38,16 +61,24 @@ public class HomeRecycleViewAdapter extends RecyclerView.Adapter<HomeRecycleView
 
     @Override
     public void onBindViewHolder(@NonNull HomeRecycleViewAdapter.ViewHolder holder, int position) {
-        HomeBean bean = homeBeanList.get(position);
+        if (getItemViewType(position) == TYPE_BANNER) return;
+
+        final  int pos = getRealPosition(holder);
+        HomeBean bean = homeBeanList.get(pos);
 
         Glide.with(context).load(bean.getImageUrl()).into(holder.imageView);
         holder.title.setText(bean.getTitle());
         holder.content.setText(bean.getContent());
     }
 
+    public int getRealPosition(ViewHolder viewHolder){
+        int position = viewHolder.getLayoutPosition();
+        return mHeaderView == null ? position:position - 1;
+    }
+
     @Override
     public int getItemCount() {
-        return homeBeanList.size();
+        return mHeaderView == null ? homeBeanList.size():homeBeanList.size() + 1;
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder {

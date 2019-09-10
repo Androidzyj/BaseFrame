@@ -49,14 +49,17 @@ public class HomeFragment extends Fragment {
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-        initBanner(view);
         initRecycleView(view);
         loadDataListener(view);
     }
 
+
+
+
     //初始化Banner图
-    private void initBanner(View view){
-        Banner mTopBanner = view.findViewById(R.id.top_banner);
+    private void initBanner(RecyclerView view,HomeRecycleViewAdapter mAdapter){
+        View header = LayoutInflater.from(MainActivity.getContext()).inflate(R.layout.layout_banner,view,false);
+        Banner mTopBanner = header.findViewById(R.id.top_banner);
         ArrayList<String> topBannerList = new ArrayList<>();
         topBannerList.add("https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1566380167579&di=b3e3762db1ed4b5417084c4ec13fe2b0&imgtype=0&src=http%3A%2F%2Fimg4.duitang.com%2Fuploads%2Fitem%2F201212%2F04%2F20121204154327_YyXJn.jpeg");
         topBannerList.add("https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1566380167579&di=b3e3762db1ed4b5417084c4ec13fe2b0&imgtype=0&src=http%3A%2F%2Fimg4.duitang.com%2Fuploads%2Fitem%2F201212%2F04%2F20121204154327_YyXJn.jpeg");
@@ -73,6 +76,7 @@ public class HomeFragment extends Fragment {
         mTopBanner.setImages(topBannerList).start();
 
         setBannerListener(mTopBanner);
+        mAdapter.setHeaderView(header);
 
     }
 
@@ -109,6 +113,8 @@ public class HomeFragment extends Fragment {
         recyclerView.setLayoutManager(layoutManager);
         HomeRecycleViewAdapter adapter = new HomeRecycleViewAdapter(MainActivity.getContext(),list);
         recyclerView.setAdapter(adapter);
+
+        initBanner(recyclerView,adapter);
     }
 
     //TODO 设置Banner图是手动创建，然后设置HomeAdapter适配器的Header形式添加进去的
