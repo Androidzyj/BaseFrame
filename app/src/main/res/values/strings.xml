@@ -4,4 +4,6 @@
     <string name="news">资讯</string>
     <string name="program">项目</string>
     <string name="mine">我的</string>
+    <string name="grade">等级:</string>
+    <string name="rank">排名:</string>
 </resources>
