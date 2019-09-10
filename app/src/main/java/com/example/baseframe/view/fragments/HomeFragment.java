@@ -95,7 +95,6 @@ public class HomeFragment extends Fragment {
     @SuppressLint("WrongConstant")
     private void initRecycleView(View view){
         List<HomeBean> list = new ArrayList<>();
-        // TODO: 2019/9/9 0009  获取数据以及添加数据,Context的获取有问题，导致布局错乱
         for (int i = 0;i <10;i++){
             list.add(new HomeBean("https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1566380167579&di=b3e3762db1ed4b5417084c4ec13fe2b0&imgtype=0&src=http%3A%2F%2Fimg4.duitang.com%2Fuploads%2Fitem%2F201212%2F04%2F20121204154327_YyXJn.jpeg",
                     "这不是一条真标题","这也不是真内容"));
@@ -117,7 +116,6 @@ public class HomeFragment extends Fragment {
         initBanner(recyclerView,adapter);
     }
 
-    //TODO 设置Banner图是手动创建，然后设置HomeAdapter适配器的Header形式添加进去的
 
 
     //设置上拉和下拉监听
