@@ -41,7 +41,8 @@
         android:layout_below="@+id/item_home_title_tv"
         android:text="这是内容呀！这是内容呀！这是内容呀！"
         android:textSize="12sp"
-        android:layout_marginTop="2dp"
+        android:layout_marginTop="3dp"
+        android:textColor="@color/black"
         />
 
 

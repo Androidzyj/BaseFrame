@@ -111,6 +111,8 @@ public class HomeFragment extends Fragment {
         recyclerView.setAdapter(adapter);
     }
 
+    //TODO 设置Banner图是手动创建，然后设置HomeAdapter适配器的Header形式添加进去的
+
 
     //设置上拉和下拉监听
     private void loadDataListener(View view){
