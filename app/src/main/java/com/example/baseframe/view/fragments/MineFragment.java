@@ -1,5 +1,6 @@
 package com.example.baseframe.view.fragments;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -11,6 +12,8 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
 import com.example.baseframe.R;
+import com.example.baseframe.view.LoginActivity;
+import com.example.baseframe.view.MainActivity;
 import com.scwang.smartrefresh.layout.SmartRefreshLayout;
 import com.scwang.smartrefresh.layout.api.RefreshLayout;
 import com.scwang.smartrefresh.layout.listener.OnRefreshListener;
@@ -76,6 +79,9 @@ public class MineFragment extends Fragment implements View.OnClickListener {
             default:
                 break;
             case R.id.user_info_rl:
+                Intent intent = new Intent(MainActivity.getContext(), LoginActivity.class);
+                intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                MainActivity.getContext().startActivity(intent);
                 break;
             case R.id.my_coin_rl:
                 break;
