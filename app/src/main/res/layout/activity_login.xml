@@ -8,8 +8,6 @@
    <com.example.baseframe.view.custom.CustomVideoView
        android:id="@+id/video_view"
        android:layout_width="match_parent"
-       android:layout_height="match_parent" />
-
-
-
+       android:layout_height="match_parent"
+       />
 </FrameLayout>

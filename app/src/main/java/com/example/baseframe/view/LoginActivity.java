@@ -22,7 +22,7 @@ public class LoginActivity extends BaseActivity {
     //初始化
     private void initView(){
         videoView = findViewById(R.id.video_view);
-        videoView.setVideoURI(Uri.parse("android.resource://"+getPackageName()+"/"+R.raw.login_background_1));
+        videoView.setVideoURI(Uri.parse("android.resource://"+getPackageName()+"/"+R.raw.login_background_2));
         videoView.start();
 
         videoView.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
