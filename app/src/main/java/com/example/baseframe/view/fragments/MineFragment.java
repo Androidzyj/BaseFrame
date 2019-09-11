@@ -65,7 +65,9 @@ public class MineFragment extends Fragment implements View.OnClickListener {
             }
         });
     }
+    // TODO: 2019/9/11 0011  第一次注册之后就将Token值保存下来
 
+    // TODO: 2019/9/11 0011  通过保存token值，来登陆，且不需要保存密码，当token值过期后，重新输入密码即可
 
 
     @Override
