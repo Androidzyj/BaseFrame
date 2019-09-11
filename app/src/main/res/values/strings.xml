@@ -6,4 +6,10 @@
     <string name="mine">我的</string>
     <string name="grade">等级:</string>
     <string name="rank">排名:</string>
+    <string name="my_coin">我的积分</string>
+    <string name="my_collection">我的收藏</string>
+    <string name="read_later">稍后阅读</string>
+    <string name="open_program">开源项目</string>
+    <string name="about_author">关于作者</string>
+    <string name="system_setting">系统设置</string>
 </resources>

@@ -96,7 +96,7 @@ public class HomeFragment extends Fragment {
     private void initRecycleView(View view){
         List<HomeBean> list = new ArrayList<>();
         for (int i = 0;i <10;i++){
-            list.add(new HomeBean("https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1566380167579&di=b3e3762db1ed4b5417084c4ec13fe2b0&imgtype=0&src=http%3A%2F%2Fimg4.duitang.com%2Fuploads%2Fitem%2F201212%2F04%2F20121204154327_YyXJn.jpeg",
+            list.add(new HomeBean("http://img5.imgtn.bdimg.com/it/u=2532230256,3280922031&fm=26&gp=0.jpg",
                     "这不是一条真标题","这也不是真内容"));
         }
 
