@@ -6,21 +6,42 @@ import android.graphics.Color;
 import android.media.MediaPlayer;
 import android.net.Uri;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.RelativeLayout;
+import android.widget.TextView;
 
 import com.example.baseframe.R;
+import com.example.baseframe.presenter.commonUtils.CommonUtils;
 import com.example.baseframe.view.custom.CustomVideoView;
 
-public class LoginActivity extends BaseActivity {
+public class LoginActivity extends BaseActivity implements View.OnClickListener {
     private CustomVideoView videoView;
+    private EditText mPhoneNumberInput;
+    private EditText mVerifyCodeInput;
+    private TextView mGetVerifyCode;
+    private Button mLogin;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
         initView();
+
+        mPhoneNumberInput = findViewById(R.id.user_count_input_et);
+        mVerifyCodeInput = findViewById(R.id.user_password_input_et);
+        mGetVerifyCode = findViewById(R.id.get_verify_code_tv);
+        mLogin = findViewById(R.id.login_in_bt);
+
+        mGetVerifyCode.setOnClickListener(this);
+        mLogin.setOnClickListener(this);
+
+        changeTextSize();
+
     }
 
-    //初始化
+    //VideoView初始化
     private void initView(){
         videoView = findViewById(R.id.video_view);
         videoView.setVideoURI(Uri.parse("android.resource://"+getPackageName()+"/"+R.raw.login_background_2));
@@ -55,6 +76,21 @@ public class LoginActivity extends BaseActivity {
         });
     }
 
+    //改变EditText输入字体的大小
+    private void changeTextSize(){
+        CommonUtils utils = new CommonUtils(this);
+        utils.setEditTextSize(mPhoneNumberInput,12,20);
+        utils.setEditTextSize(mVerifyCodeInput,12,20);
+    }
 
+    @Override
+    public void onClick(View view) {
+        switch (view.getId()){
+            case R.id.get_verify_code_tv:
+                break;
+            case R.id.login_in_bt:
+                break;
+        }
 
+    }
 }
