@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
@@ -18,5 +19,24 @@
             android:textColor="@color/black"
             />
     </RelativeLayout>
+
+    <com.flyco.tablayout.SlidingTabLayout
+        android:id="@+id/sliding_tab"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:tl_textUnselectColor="@color/littleGray"
+        app:tl_textSelectColor="@color/black"
+        app:tl_indicator_width_equal_title="true"
+        app:tl_tab_space_equal="true"
+        app:tl_indicator_color="@color/black"
+        android:background="@color/withe"
+        >
+    </com.flyco.tablayout.SlidingTabLayout>
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/news_vp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    </androidx.viewpager.widget.ViewPager>
 
 </LinearLayout>

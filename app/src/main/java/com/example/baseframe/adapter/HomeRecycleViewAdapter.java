@@ -13,6 +13,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.bumptech.glide.Glide;
 import com.example.baseframe.R;
 import com.example.baseframe.model.HomeBean;
+import com.makeramen.roundedimageview.RoundedImageView;
 
 import java.util.List;
 
@@ -82,7 +83,7 @@ public class HomeRecycleViewAdapter extends RecyclerView.Adapter<HomeRecycleView
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder {
-        public ImageView imageView;
+        public RoundedImageView imageView;
         public TextView title;
         public TextView content;
 

@@ -91,6 +91,5 @@ public class LoginActivity extends BaseActivity implements View.OnClickListener 
             case R.id.login_in_bt:
                 break;
         }
-
     }
 }
