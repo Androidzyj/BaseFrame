@@ -81,7 +81,7 @@ dependencies {
 
     implementation 'com.makeramen:roundedimageview:2.3.0'
 
-    //AutoSize依赖
+    //AutoSize依赖，自动尺寸适配
     implementation 'me.jessyan:autosize:1.1.2'
 
 }
