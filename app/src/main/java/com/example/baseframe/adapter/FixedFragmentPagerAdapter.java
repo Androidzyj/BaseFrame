@@ -12,7 +12,7 @@ public class FixedFragmentPagerAdapter extends FragmentPagerAdapter {
     private Fragment[] mFragments = null;
     private String[] mTitles = null;
 
-    //类型后面接三个点是什么意思
+    //可变参数
     public void setFragments(Fragment... mFragments) {
         this.mFragments = mFragments;
         notifyDataSetChanged();
